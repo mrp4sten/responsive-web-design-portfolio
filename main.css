@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap");
+
+:root {
+    --font-display: "Grandstander", cursive;
+    --font-code: "Inconsolata", monospace;
+    --color-mint-light: #effffb;
+    --color-mint: #50d890;
+    --color-blue: #4f98ca;
+    --color-black: #272727;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-mint-light);
+}
+
+nav li,
+nav a {
+    font-family: var(--font-code);
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--color-mint);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5rem;
+    background-color: var(--color-black);
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    cursor: pointer;
+    width: 7rem;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: var(--color-mint-light);
+}
+
+nav button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    color: var(--color-mint-light);
+    transition: all 0.3s ease 0s;
+}
+
+nav button:hover {
+    background-color: var(--color-mint-light);
+    color: var(--color-blue);
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0rem 0rem;
+    }
+
+    .nav__links li {
+        padding: 0 1.5rem;
+    }
+
+    nav button {
+        margin: 0 2rem;
+    }
+}
+
+section {
+    padding: 5rem;
+}
+
+.section-welcome {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg,
+            var(--color-blue) 0%,
+            var(--color-black) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-welcome h1,
+.section-welcome p {
+    color: var(--color-mint-light);
+}
+
+.section-welcome h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+}
+
+.section-welcome p {
+    font-family: var(--font-code);
+    font-weight: 800;
+}
+
+.section-projects {
+    display: grid;
+    grid-template-columns: auto auto;
+    background: linear-gradient(10deg,
+            var(--color-mint) 10rem,
+            var(--color-blue) 100%);
+}
+
+.section-projects div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    line-height: 2rem;
+    background-color: var(--color-black);
+    border-radius: 1rem;
+}
+
+.section-projects div h6 {
+    font-family: var(--font-code);
+    font-size: 1.2rem;
+    color: var(--color-mint-light);
+}
+
+.section-projects .project-tile {
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+.section-projects a {
+    font-family: var(--font-display);
+    text-decoration: none;
+    font-weight: 900;
+    border-radius: 2rem;
+    color: var(--color-mint-light);
+    background-color: var(--color-blue);
+    padding: 0.5rem 1.5rem;
+    margin: 0.3rem;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.section-projects a:hover {
+    color: var(--color-blue);
+    background-color: var(--color-mint-light);
+}
+
+@media (max-width: 768px) {
+    .section-projects {
+        grid-template-columns: auto;
+    }
+}
+
+.section-contact {
+    background: linear-gradient(45deg,
+            var(--color-mint-light) 5rem,
+            var(--color-blue) 100%);
+}
+
+.section-contact ul {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    list-style: none;
+    background-color: var(--color-black);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+
+    text-decoration: none;
+}
+
+.section-contact i {
+    color: var(--color-blue);
+    margin: 0 1rem;
+    transition: all 0.3s ease 0s;
+}
+
+.section-contact i:hover {
+    color: var(--color-mint);
+}
+
+@media (max-width: 768px) {
+    .section-contact ul {
+        justify-content: center;
+    }
+}
